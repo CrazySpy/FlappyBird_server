@@ -15,16 +15,28 @@
     <div id="flappybird" class="game"></div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/phaser/2.2.2/custom/phaser-arcade-physics.min.js"></script>
-	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>  
-	
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/jsencrypt/3.0.0-beta.1/jsencrypt.min.js"></script>
 
     <!-- build:js main.min.js -->
+    <script src="js/encrypt.js"></script>
     <script src="js/boot.js"></script>
     <script src="js/preloader.js"></script>
     <script src="js/menu.js"></script>
     <script src="js/game.js"></script>
     <script src="js/main.js"></script>
     <!-- /build -->
+    <textarea id="pubkey"hidden>
+        <!-- paste your public key here -->
+        <!--
+        -----BEGIN PUBLIC KEY-----
+        MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC1cFrIR2Q03PYV+Z3g7GOfexk4
+        BwvD20+J90kW3w7VU5o+0X+mugPaw320bGtZy2H09+yQeHAX22GmuKoMd0Eb52qT
+        3JBvISILGPTtVRU4jfStlpAc45phX78M8BQkZ6HUEbRjPrUVyfYDqLp09t2lThxR
+        +JHKi5qbPoJca4/DJQIDAQAB
+        -----END PUBLIC KEY-----
+        -->
+    </textarea>
 
 </body>
 

@@ -16,7 +16,7 @@ class ScoreController extends Controller
 		$highScore = false;
 		if(Cache::has('highScore_' . $userId))
 		{
-				$highScore = Cache::get('highScore_' . $userId);
+			$highScore = Cache::get('highScore_' . $userId);
 		}
 		else
 		{
@@ -34,7 +34,10 @@ class ScoreController extends Controller
 	public function log(Request $request)
 	{
 		$userId = Session::get('userId') ? Session::get('userId') : 0;
-		$score = $request->input('score');
+
+		$input = Session::get('input');
+		$score = 0;
+		if(isset($input->score)) $score = intval($input->score);
 
 		return Redis::rpush('playLog_'.$userId, $score, date('Y-m-d h:i:s'));
 	}
@@ -42,7 +45,11 @@ class ScoreController extends Controller
 	public function refresh(Request $request)
 	{
 		$userId = Session::get('userId') ? Session::get('userId') : 0;
-		$score = $request->input('score');
+
+		$input = Session::get('input');
+		$score = 0;
+		if(isset($input->score)) $score = intval($input->score);
+
 		$lastScore = $this->getHighScore($userId);
 		
 		
@@ -68,7 +75,6 @@ class ScoreController extends Controller
 			}
 			Cache::put('highScore_' . $userId, $score, now()->addMinutes(10));
 			DB::table('ScoreLog')->insert($playLog);
-
 		}
 		else
 		{

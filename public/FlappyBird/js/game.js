@@ -189,7 +189,7 @@
 				$.ajax({
 					'url' : this.logUrl,
 					'type' : 'post',
-					'data': {'score' : this.score},
+					'data': {'data' : encrypt("{\"score\" : " + this.score + "}")},
 				});
 				this.lastUpdateScore = this.score;
 				this.direction *= -1;

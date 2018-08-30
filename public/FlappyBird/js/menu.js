@@ -42,7 +42,7 @@
 				'url' : this.updateUrl,
 				'type' : 'post',
 				'async': false,
-				'data': {'score' : score},
+				'data': {'data' : encrypt("{\"score\" : " + score + "}")},
 				'success' : function(rtn)
 				{
                     console.log(rtn);
