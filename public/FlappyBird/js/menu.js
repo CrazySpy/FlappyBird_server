@@ -6,8 +6,8 @@
         this.titleTxt = null;
         this.startTxt = null;
         this.score = 0;
-        this.updateUrl = 'http://flappy2.dev/UpdateScore';
-        this.topListUrl = 'http://flappy2.dev/TopList';
+        this.updateUrl = '//' + document.domain + '/UpdateScore';
+        this.topListUrl = '//' + document.domain + '/TopList';
     }
 
     Menu.prototype = {

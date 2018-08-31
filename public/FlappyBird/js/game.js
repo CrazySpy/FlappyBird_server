@@ -6,7 +6,7 @@
         this.jumpButton = null;
         this.blockGroup = null;
         this.scoreText = null;
-		this.logUrl = 'http://flappy2.dev/Playing';
+		this.logUrl = '//' + document.domain + '/Playing';
     }
 
     Game.prototype = {
