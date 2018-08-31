@@ -37,9 +37,11 @@ class ScoreController extends Controller
 
 		$input = Session::get('input');
 		$score = 0;
-		if(isset($input->score)) $score = intval($input->score);
-
-		return Redis::rpush('playLog_'.$userId, $score, date('Y-m-d h:i:s'));
+		if(isset($input->score)) 
+		{
+			$score = intval($input->score);
+			return Redis::rpush('playLog_'.$userId, $score, date('Y-m-d h:i:s'));
+		}
 	}
 	
 	public function refresh(Request $request)
@@ -48,6 +50,7 @@ class ScoreController extends Controller
 
 		$input = Session::get('input');
 		$score = 0;
+		if(!isset($input->score) || !$input->score) return 'Encrypt error';
 		if(isset($input->score)) $score = intval($input->score);
 
 		$lastScore = $this->getHighScore($userId);
