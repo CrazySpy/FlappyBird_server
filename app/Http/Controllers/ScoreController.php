@@ -40,7 +40,7 @@ class ScoreController extends Controller
 		if(isset($input->score)) 
 		{
 			$score = intval($input->score);
-			return Redis::rpush('playLog_'.$userId, $score, date('Y-m-d h:i:s'));
+			return Redis::rpush('playLog_'.$userId, $score, date('Y-m-d H:i:s'));
 		}
 	}
 	
@@ -61,11 +61,11 @@ class ScoreController extends Controller
 		{
 			if(false !== $lastScore) 
 			{
-				DB::table('TopList')->where('userId', '=', $userId)->update(['score' => $score, 'generateTime' => date('Y-m-d h:i:s')]);
+				DB::table('TopList')->where('userId', '=', $userId)->update(['score' => $score, 'generateTime' => date('Y-m-d H:i:s')]);
 			}
 			else if(false === $lastScore) // Insert when the user is first play.
 			{
-				DB::table('TopList')->insert(['userId' => $userId, 'score' => $score, 'generateTime' => date('Y-m-d h:i:s')]);
+				DB::table('TopList')->insert(['userId' => $userId, 'score' => $score, 'generateTime' => date('Y-m-d H:i:s')]);
 			}
 
 			$logLen = Redis::llen('playLog_'.$userId);
@@ -87,7 +87,7 @@ class ScoreController extends Controller
 				Redis::lpop('playLog_'.$userId);
 			}
 		}
-		DB::table('ScoreLog')->insert(['userId' => $userId, 'score' => $score, 'type' => 1, 'generateTime' => date('Y-m-d h:i:s')]);
+		DB::table('ScoreLog')->insert(['userId' => $userId, 'score' => $score, 'type' => 1, 'generateTime' => date('Y-m-d H:i:s')]);
 		return ['status' => 'success', 'data' => ''];	
 	}
 
