@@ -11,6 +11,9 @@
 |
 */
 
-Route::post('Playing', 'ScoreController@log');
-Route::post('UpdateScore', 'ScoreController@refresh');
-Route::get('TopList', 'ScoreController@topList');
+Route::post('Playing', 'ScoreController@log')->middleware(['auth.yiban', 'rsa']);
+Route::post('UpdateScore', 'ScoreController@refresh')->middleware(['auth.yiban', 'rsa']);
+Route::get('TopList', 'ScoreController@topList')->middleware('auth.yiban');
+
+Route::get('/', 'IndexController@index')->middleware('auth.yiban')->name('index');
+Route::get('YibanAuth', 'AuthController@auth')->name('auth');

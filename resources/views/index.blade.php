@@ -6,7 +6,7 @@
     <title>FlappyBird</title>
 
     <!-- build:css main.min.css -->
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="/FlappyBird/css/main.css">
     <!-- /build -->
 </head>
 
@@ -19,12 +19,12 @@
     <script src="https://cdn.bootcss.com/jsencrypt/3.0.0-beta.1/jsencrypt.min.js"></script>
 
     <!-- build:js main.min.js -->
-    <script src="js/encrypt.js"></script>
-    <script src="js/boot.js"></script>
-    <script src="js/preloader.js"></script>
-    <script src="js/menu.js"></script>
-    <script src="js/game.js"></script>
-    <script src="js/main.js"></script>
+    <script src="/FlappyBird/js/encrypt.js"></script>
+    <script src="/FlappyBird/js/boot.js"></script>
+    <script src="/FlappyBird/js/preloader.js"></script>
+    <script src="/FlappyBird/js/menu.js"></script>
+    <script src="/FlappyBird/js/game.js"></script>
+    <script src="/FlappyBird/js/main.js"></script>
     <!-- /build -->
     <textarea id="pubkey"hidden>
         <!-- paste your public key here -->

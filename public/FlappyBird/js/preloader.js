@@ -18,14 +18,14 @@
         },
 
         loadResources: function () {
-            this.load.spritesheet('bird', 'assets/bird.png', 100, 69, 2);
+            this.load.spritesheet('bird', '/FlappyBird/assets/bird.png', 100, 69, 2);
 
-            this.load.image('background', 'assets/background.png');
-            this.load.image('block-top', 'assets/block-top.png');
-            this.load.image('block-bottom', 'assets/block-bottom.png');
-            this.load.image('start', 'assets/start.png');
+            this.load.image('background', '/FlappyBird/assets/background.png');
+            this.load.image('block-top', '/FlappyBird/assets/block-top.png');
+            this.load.image('block-bottom', '/FlappyBird/assets/block-bottom.png');
+            this.load.image('start', '/FlappyBird/assets/start.png');
 
-            this.load.bitmapFont('gamefont', 'assets/Arial.png', 'assets/Arial.xml');
+            this.load.bitmapFont('gamefont', '/FlappyBird/assets/Arial.png', '/FlappyBird/assets/Arial.xml');
         },
 
         create: function () {
