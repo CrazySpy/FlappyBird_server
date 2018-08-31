@@ -27,15 +27,7 @@
     <script src="/FlappyBird/js/main.js"></script>
     <!-- /build -->
     <textarea id="pubkey"hidden>
-        <!-- paste your public key here -->
-        <!--
-        -----BEGIN PUBLIC KEY-----
-        MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC1cFrIR2Q03PYV+Z3g7GOfexk4
-        BwvD20+J90kW3w7VU5o+0X+mugPaw320bGtZy2H09+yQeHAX22GmuKoMd0Eb52qT
-        3JBvISILGPTtVRU4jfStlpAc45phX78M8BQkZ6HUEbRjPrUVyfYDqLp09t2lThxR
-        +JHKi5qbPoJca4/DJQIDAQAB
-        -----END PUBLIC KEY-----
-        -->
+        <?php echo(file_get_contents(app_path() . '/../key/rsa_1024_pub.pem')); ?>
     </textarea>
 
 </body>
