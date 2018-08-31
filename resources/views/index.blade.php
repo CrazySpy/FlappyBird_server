@@ -19,12 +19,11 @@
     <script src="https://cdn.bootcss.com/jsencrypt/3.0.0-beta.1/jsencrypt.min.js"></script>
 
     <!-- build:js main.min.js -->
-    <script src="/FlappyBird/js/encrypt.js"></script>
-    <script src="/FlappyBird/js/boot.js"></script>
-    <script src="/FlappyBird/js/preloader.js"></script>
-    <script src="/FlappyBird/js/menu.js"></script>
-    <script src="/FlappyBird/js/game.js"></script>
-    <script src="/FlappyBird/js/main.js"></script>
+    <script src="/FlappyBird/js/boot.min.js"></script>
+    <script src="/FlappyBird/js/preloader.min.js"></script>
+    <script src="/FlappyBird/js/menu.min.js"></script>
+    <script src="/FlappyBird/js/game.min.js"></script>
+    <script src="/FlappyBird/js/main.min.js"></script>
     <!-- /build -->
     <textarea id="pubkey"hidden>
         <?php echo(file_get_contents(app_path() . '/../key/rsa_1024_pub.pem')); ?>
