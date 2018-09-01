@@ -14,7 +14,7 @@
 
     <div id="flappybird" class="game"></div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/phaser/2.2.2/custom/phaser-arcade-physics.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/phaser-ce/2.11.0/phaser.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdn.bootcss.com/jsencrypt/3.0.0-beta.1/jsencrypt.min.js"></script>
 
